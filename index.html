@@ -4,26 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        html,body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-        }
-        button{
-            height: 100px;
-            width: 500px;
-            background-color: rgb(41, 41, 41);
-            color: darkgrey;
-            font-size: 40px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            border: none;
-            border-radius: 1000px;
-        }
+<style>
 
-    </style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background-color:black;
+}
+
+button{
+height:100px;
+width:500px;
+background-color:rgb(41,41,41);
+color:darkgrey;
+font-size:40px;
+border:none;
+border-radius:1000px;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* Gradient Border */
+button::after{
+content:"";
+position:absolute;
+
+height:110%;
+width:104%;
+
+background-image:linear-gradient(to top left, green, yellow);
+
+border-radius:1000px;
+
+z-index:-1;
+
+}
+
+</style>
 </head>
 <body>
     <button>hover me</button>
